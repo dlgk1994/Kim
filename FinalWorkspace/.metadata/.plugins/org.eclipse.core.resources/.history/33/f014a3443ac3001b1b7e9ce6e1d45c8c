@@ -1,0 +1,12 @@
+package com.care.root.main;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+@Controller
+public class header {
+	
+	@RequestMapping("main")
+	public String header() {
+		return "default/main";
+	}
+}

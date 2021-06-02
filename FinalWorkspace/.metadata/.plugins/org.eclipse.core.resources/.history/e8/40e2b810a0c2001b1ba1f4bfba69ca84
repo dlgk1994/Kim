@@ -1,0 +1,12 @@
+package main;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class header {
+	
+	@RequestMapping("header")
+	public String header() {
+		return "header.jsp";
+	}
+	
+}

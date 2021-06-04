@@ -153,9 +153,9 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <!--<Context docBase="Final" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:Final"/> -->
-      <Context docBase="D:\FinalProject\FinalWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\FinalProject\FinalWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\z_project" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:z_project"/>  
-      </Host>
+      <!--<Context docBase="Final" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:Final"/>
+      <Context docBase="z_project" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:z_project"/> -->
+      <Context docBase="D:\Kim\FinalWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Kim\FinalWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\z_project" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:z_project"/></Host>
     </Engine>
   </Service>
 </Server>

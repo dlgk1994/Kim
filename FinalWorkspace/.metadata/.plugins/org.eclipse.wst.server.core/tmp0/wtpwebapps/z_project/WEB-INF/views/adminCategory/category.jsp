@@ -38,9 +38,9 @@
 		</ul>
 		<label><b>회원관리</b></label>
 		<ul>
-			<li><a href="#">Q&A</a></li>
-			<li><a href="#">공지사항</a></li>
-			<li><a href="#">자주하는 질문</a></li>
+			<li><a href="${contextPath }/board/qna">Q&A</a></li>
+			<li><a href="${contextPath }/board/notice">공지사항</a></li>
+			<li><a href="${contextPath }/board/faq">자주하는 질문</a></li>
 		</ul>
 	</nav>
 	

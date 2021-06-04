@@ -12,7 +12,7 @@
 
 
 <style type="text/css">
-	.wrap{width: 1200px;height: 400px; border:1px solid black;margin: -490px 0 0 240px;}
+	.wrap{width: 1200px;height: 400px; margin: -490px 0 0 240px;}
 	.button{margin-left: 1000px;}
 	.container{margin-top: 20px;}
 	#b3{margin-top: 10px; margin-left: 10px;}

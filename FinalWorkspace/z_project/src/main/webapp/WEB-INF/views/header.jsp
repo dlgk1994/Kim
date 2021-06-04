@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-	<c:set var="contextPath" value="<%=request.getContextPath()%>" />
+	<c:set var="contextPath" value="<%=request.getContextPath()%>"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,13 +51,13 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+						<a class="nav-link active" aria-current="page" href="${ contextPath }/main">Home</a></li>
 					<li class="nav-item">
 						<a class="nav-link" href="#!">login</a></li>
 					<li class="nav-item">
 						<a class="nav-link" href="#!">join</a></li>
 					<li class="nav-item">
-						<a class="nav-link" href="#!">myPage</a></li>
+						<a class="nav-link" href="${ contextPath }/mypage/myCart">myPage</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
 						role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
@@ -69,10 +69,10 @@
 						</ul></li>
 					
 				</ul>
-				<form class="d-flex">
+				<form class="d-flex" action="${ contextPath }/mypage/myCart">
 					<button class="btn btn-outline-dark" type="submit">
-						<i class="bi-cart-fill me-1"></i> Cart <span
-							class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+						<i class="bi-cart-fill me-1"></i> Cart 
+						<span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
 					</button>
 				</form>
 			</div>
@@ -85,12 +85,12 @@
 			<div class="text-center text-white">
 				<h1 class="display-4 fw-bolder">전자기기 대여 사이트</h1>
 				<p class="lead fw-normal text-white-50 mb-0">With this shop
-					hompeage template</p>
+					homepage template</p>
 			</div>
 		</div>
 	</header>
 	<span class="search">
-		<form action="" >
+		<form action="">
 			<input class="searchText" type="text">
 			
 			<button type="button" class="btn btn-outline-primary" id="searchButton">검색</button>

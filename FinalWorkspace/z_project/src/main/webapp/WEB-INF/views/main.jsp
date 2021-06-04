@@ -14,11 +14,31 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="${contextPath }/resources/css/styles.css" rel="stylesheet" />
     <style type="text/css">
-    
+    .searchText {
+	width: 400px;
+	height: 39px;
+	border: 2px solid black;
+	border-radius: 10px;
+	outline: none;
+	margin: 0 auto;
+	align-content: center;
+}
+
+.search {
+	position: relative;
+	text-align: center;
+	top: 10px;
+}
     </style>
 </head>
 <body>
     <c:import url="header.jsp"/>
+    <div class="search">
+			<form action="">
+				<input class="searchText mt-auto" type="text">
+				<button type="button" class="btn btn-outline-dark mt-auto">검색</button>
+			</form>
+		</div>
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">

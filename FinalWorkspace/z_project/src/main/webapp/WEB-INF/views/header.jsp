@@ -16,21 +16,7 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="${contextPath }/resources/css/styles.css" rel="stylesheet" />
 <style type="text/css">
-.searchText {
-	width: 400px;
-	height: 39px;
-	border: 2px solid black;
-	border-radius: 10px;
-	outline: none;
-	margin: 0 auto;
-	align-content: center;
-}
 
-.search {
-	position: relative;
-	text-align: center;
-	top: 10px;
-}
 
 .category_loc {
 	display: table;
@@ -121,20 +107,13 @@
 	</nav>
 
 	<!-- Header-->
-	<header class="bg-dark py-3">
+	<header class="bg-dark py-1">
 		<div class="container px-4 px-lg-5 my-5">
 			<div class="text-center text-white">
 				<h1 class="display-4 fw-bolder">전자기기 대여 사이트</h1>
-				<p class="lead fw-normal text-white-50 mb-0">With this shop
-					homepage template</p>
 			</div>
 		</div>
-		<div class="search">
-			<form action="">
-				<input class="searchText mt-auto" type="text">
-				<button type="button" class="btn btn-outline-light mt-auto">검색</button>
-			</form>
-		</div>
+		
 	</header>
 
 	<!-- Bootstrap core JS-->

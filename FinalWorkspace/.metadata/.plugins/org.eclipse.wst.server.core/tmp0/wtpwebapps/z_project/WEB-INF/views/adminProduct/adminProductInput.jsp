@@ -24,8 +24,13 @@
     
 <style type="text/css">
 	.wrap{width: 1200px;height: 800px; margin: -490px 0 0 140px;}
+<<<<<<< HEAD
 	.subTitle{margin-left: 450px; font-size: 40px;}
 	.iTitle{margin: 20px 0 0 100px; height: 70px;}
+=======
+	.subTitle{margin-left: 450px;}
+	.iTitle{margin: 20px 0 0 100px;}
+>>>>>>> kim
 	.inpuptTile{width: 400px;}
 	.t{width: 1500px; height: 1000px;  margin: auto;}
 	.category1{margin: 20px 0 0 100px; border: 1px solid black;}

@@ -23,23 +23,18 @@
     
     
 <style type="text/css">
-	.wrap{width: 1200px;height: 800px; margin: -490px 0 0 140px;}
-<<<<<<< HEAD
-	.subTitle{margin-left: 450px; font-size: 40px;}
-	.iTitle{margin: 20px 0 0 100px; height: 70px;}
-=======
+	.wrap{width: 1200px;height: 800px; border:1px solid black;margin: -490px 0 0 140px;}
 	.subTitle{margin-left: 450px;}
 	.iTitle{margin: 20px 0 0 100px;}
->>>>>>> kim
 	.inpuptTile{width: 400px;}
 	.t{width: 1500px; height: 1000px;  margin: auto;}
 	.category1{margin: 20px 0 0 100px; border: 1px solid black;}
 	.category2{margin: 40px 0 0 100px; border: 1px solid black;}
 	
-	.thumbnail{width: 80px; height: 100px;  margin: -100px 0 0 900px;}
+	.thumbnail{width: 80px; height: 100px; border: 1px solid black; margin: -100px 0 0 900px;}
 	.thumbnailFile{margin: 10px 0 0 900px;}
 	
-	.summernote1{width: 1000px; margin: 40px 0 0 100px; }
+	.summernote1{width: 900px; margin: 40px 0 0 100px; }
 	
 	.file{margin: 0 0 0 100px;}
 	

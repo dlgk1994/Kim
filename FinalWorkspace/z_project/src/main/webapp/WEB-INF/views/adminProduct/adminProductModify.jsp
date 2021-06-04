@@ -23,7 +23,7 @@
     
     
 <style type="text/css">
-	.wrap{width: 1200px;height: 800px; border:1px solid black;margin: -490px 0 0 140px;}
+	.wrap{width: 1200px;height: 800px; margin: -490px 0 0 140px;}
 	.subTitle{margin-left: 450px;}
 	.iTitle{margin: 20px 0 0 100px;}
 	.inpuptTile{width: 400px;}

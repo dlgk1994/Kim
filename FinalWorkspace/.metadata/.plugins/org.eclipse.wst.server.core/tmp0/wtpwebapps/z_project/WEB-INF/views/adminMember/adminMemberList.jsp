@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 
 <style type="text/css">
-	.wrap{width: 1200px;height: 800px; border:1px solid black;margin: -490px 0 0 200px;}
+	.wrap{width: 1200px;height: 800px; margin: -490px 0 0 200px;}
 	.t{width: 1500px; height: 1000px;  margin: auto;}
 	.inpuptTile{width: 400px; margin-left: 50px;}
 	.array_search{margin: 0 0 0 780px;}

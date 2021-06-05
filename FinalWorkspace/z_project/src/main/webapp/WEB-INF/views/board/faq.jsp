@@ -24,6 +24,7 @@
  	div#container_box { float: right; width: calc(100% - 200px - 20px); }
  	aside ul li { margin-bottom: 10px; list-style: none; }
  	nav ul { display: flex; list-style: none; }
+ 	nav ul li { margin-right: 30px; }
 </style>
 </head>
 <body>

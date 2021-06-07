@@ -20,7 +20,7 @@
 <style type="text/css">
 	section#container { padding: 20px 0; border-top: 2px solid #eee; border-bottom: 2px solid #eee; }
  	section#container::after { content: ""; display: block; clear: both; }
-	aside { float: left; width: 200px; padding: 0 0 0 10px; }
+	aside { float: left; width: 200px; padding: 0 0 0 5px; }
  	div#container_box { float: right; width: calc(100% - 200px - 20px); }
  	aside ul li { margin-bottom: 10px; list-style: none; }
 </style>
@@ -32,28 +32,15 @@
 			<c:import url="../aside.jsp"/>				
 		</aside>
 		<div id="container_box">
-		<h3>주문 내역</h3>
+		<h3>문의 수정</h3>
 			<div>
-				<table border="1" style="width: 90%;">
-					<tr>
-						<th colspan="2">상품명</th><th>대여가격</th><th>반납일</th><th>선택</th>
-					</tr>
-					<c:choose>
-						<c:when test="">
-							<tr>
-								<td><img src="" style="width: 50px; height: 50px">상품명</td>
-								<td>대여가격</td>
-								<td>반납일</td>
-								<td>
-									<button type="button" onclick="location.href='${ contextPath }/mypage/reviewForm'">리뷰작성</button>
-									<button type="button" onclick="#">반납</button>
-								</td>
-							</tr>
-						</c:when>
-						<c:otherwise>
-							<tr><td colspan="5">주문내역이 없습니다</td></tr>
-						</c:otherwise>
-					</c:choose>
+				<table border="1">
+					<tr><td><img src="" style="width: 50px; height: 50px"></td><td>상품명</td></tr>
+					<tr><td>아이디 ( 수정불가 )</td></tr>
+					<tr><td><textarea rows="" cols="" placeholder="내용을 입력해주세요"></textarea></td></tr>
+					<tr><th colspan="2">
+						<button type="button" onclick="#">수정</button>
+						<button type="button" onclick="history.back()">취소</button>
 				</table>
 			</div>
 		</div>

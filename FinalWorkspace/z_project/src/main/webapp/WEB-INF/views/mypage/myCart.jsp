@@ -38,22 +38,34 @@
 					<tr>
 						<th>상품선택</th><th colspan="2">상품명</th><th>대여가격</th><th>대여가능여부</th><th>선택</th>
 					</tr>
-					<c:choose>
-						<c:when test="">
-							<tr>
-								<td><input type="checkbox"></td>
-								<td><img src="" style="width: 50px; height: 50px"></td>
-							</tr>
-						</c:when>
-						<c:otherwise>
-							<tr><td colspan="5">장바구니가 비어 있습니다</td></tr>
-						</c:otherwise>
-					</c:choose>
+					<c:if test="${ cartList.size() == 0 }">
+						<tr><th colspan="5">장바구니가 비어 있습니다</th></tr>
+					</c:if>
+					<c:forEach var="dto" items="${ cartList }">
+						<tr>
+							<td><input type="checkbox"></td>
+							<td colspan="2"><img src="${ dto.cart_photo }" style="width: 50px; height: 50px">${ dto.product_name }</td>
+							<td>${ dto.payment_total }</td>
+							<td>${ dto.cart_state }</td>
+							<td>
+								<button type="button" onclick="#">대여</button>
+								<button type="button" onclick="#">삭제</button>
+							</td>
+						</tr>
+					</c:forEach>
+					<tr>
+						<td colspan="6">
+							<c:forEach	var="num" begin="1" end="${ repeat }">
+								<a href="${ contextPath }/mypage/myCart?num=${ num }">[${ num }]</a>
+							</c:forEach>
+							<button type="button">선택 상품 주문</button>
+							<button type="button">전체 상품 주문</button>
+						</td>
+					</tr>
 				</table>
 			</div>
 			<div>
-				<button type="button">선택 상품 주문</button>
-				<button type="button">전체 상품 주문</button>
+				
 			</div>
 		</div>
 	</section>

@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.t{width: 1500px; height: 1000px;  margin: auto;}
+	.wrap{width: 1200px;height: 800px; border:1px solid black;margin: -490px 0 0 200px;}
+</style>
+</head>
+<body>
+<jsp:include page="../header.jsp" />
+<div class="t">
+<jsp:include page="../adminCategory/category.jsp" />
+	
+	<div class="wrap">
+		<h1>공지사항</h1>
+		<div>
+			<select name="category2" class="category2">
+				<option value="0">공지분류
+				<option value="1">[일반공지]
+				<option value="2">[당첨발표]
+			</select>
+		</div>
+	</div>
+</div>
+<jsp:include page="../footer.jsp" />
+
+<c:import url="../footer.jsp"/>
+	
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

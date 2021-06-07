@@ -1,7 +1,6 @@
 #Tomcat publish data
-<<<<<<< HEAD
-#Fri Jun 04 17:09:30 KST 2021
-=======
-#Fri Jun 04 17:23:18 KST 2021
->>>>>>> kim
+#Mon Jun 07 15:24:09 KST 2021
+=\=\=\=\=\=\=
+>>>>>>>=kim
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\kmk1994\\.m2\\repository\\org\\springframework\\spring-web\\5.2.1.RELEASE\\spring-web-5.2.1.RELEASE.jar=WEB-INF/lib/spring-web-5.2.1.RELEASE.jar
+<<<<<<<=HEAD

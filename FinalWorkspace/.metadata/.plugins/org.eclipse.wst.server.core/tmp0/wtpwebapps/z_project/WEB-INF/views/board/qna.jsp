@@ -29,9 +29,17 @@
 	<c:import url="../header.jsp"/>	
 	<section id="container">
 		<aside>
-			<c:import url="../aside.jsp"/>				
+			<c:choose> <!-- 관리자 로그인 하면 관리자에 맞게 왼쪽에 카텔고리 바뀜 -->
+				<c:when test="${login == admin }">
+					<jsp:include page="../adminCategory/category.jsp" />
+				</c:when>
+				<c:otherwise>
+					<c:import url="../aside.jsp"/>
+				</c:otherwise>
+			</c:choose>					
 		</aside>
 		<div id="container_box">
+		
 		<h3>Q&A</h3>
 		<button type="button" class="btn btn-outline-primary" id="b2" onclick="location.href='../boardInput/qnaInput'" style="margin: 0 0 0 1060px;">글쓰기</button>
 			<div style="margin: 10px 0 10px 0;">
@@ -43,7 +51,7 @@
 							<td>123</td>
 							<td>답변중</td>
 							<td>
-								<a href="${contextPath }/boardInput/QNA">반품은어떻게하나요</a> 
+								<a href="${contextPath }/boardInput/QNA">반품은어떻게하나요(db에서 값가져오기)</a> 
 							</td>
 							<td>홍길동</td>
 							<td>21-12-12</td>

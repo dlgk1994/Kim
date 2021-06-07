@@ -50,7 +50,7 @@
 		
 		
 		<c:choose>
-			<c:when test=""><!-- 관리자 로그인 -->
+			<c:when test="${login == admin }"><!-- 관리자 로그인 -->
 				<div>
 					<label style="margin: 40px 0 0 0px;">글 제목</label><br>
 					<input type="text" style=" width: 740px;" name="enquiry_subject" value="db값 가져오기" readonly="readonly">

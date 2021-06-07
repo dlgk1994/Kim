@@ -29,7 +29,14 @@
 	<c:import url="../header.jsp"/>	
 	<section id="container">
 		<aside>
-			<c:import url="../aside.jsp"/>				
+			<c:choose> <!-- 관리자 로그인 하면 관리자에 맞게 왼쪽에 카텔고리 바뀜 -->
+				<c:when test="${login == admin }">
+					<jsp:include page="../adminCategory/category.jsp" />
+				</c:when>
+				<c:otherwise>
+					<c:import url="../aside.jsp"/>
+				</c:otherwise>
+			</c:choose>					
 		</aside>
 		<div id="container_box">
 		<h3>공지사항</h3>

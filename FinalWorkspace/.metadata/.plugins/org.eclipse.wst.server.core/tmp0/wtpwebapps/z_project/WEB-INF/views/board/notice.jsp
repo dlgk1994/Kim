@@ -29,28 +29,38 @@
 	<c:import url="../header.jsp"/>	
 	<section id="container">
 		<aside>
-			<c:import url="../aside.jsp"/>				
+			<c:choose> 
+				<c:when test="${login == admin }"><!-- 관리자 로그인 하면 관리자에 맞게 왼쪽에 카텔고리 바뀜 -->
+					<jsp:include page="../adminCategory/category.jsp" />
+					
+				</c:when>
+				<c:otherwise>
+					<c:import url="../aside.jsp"/>
+				</c:otherwise>
+			</c:choose>					
 		</aside>
 		<div id="container_box">
 		<h3>공지사항</h3>
-			<div>
-				<table border="1" style="width: 90%; border-bottom: 1px solid #D5D5D5;">
-					<tr>
-						<th>글번호</th><th>공지분류</th><th>제목</th><th>등록일</th><th>조회수</th>
+		<c:choose>
+			<c:when test="${login == admin }"> <!-- ${login == admin }  관리자가 로그인했을때만 글 쓰기 버튼 보이기 -->
+				<button type="button" class="btn btn-outline-primary" id="b2" onclick="location.href='../boardInput/noticeInput'" style="margin: 0px 0 0 1060px;">글쓰기</button>
+			</c:when>
+		</c:choose>
+			
+		<div style="margin-top: 10px;">
+			<table border="1" style="width: 90%; border-bottom: 1px solid #D5D5D5;">
+				<tr>
+					<th>글번호</th><th>공지분류</th><th>제목</th><th>등록일</th><th>조회수</th>
+				</tr>					
+					<tr><!-- td값 db에서 가져오기 -->
+						<td>12</td>
+						<td>[일반공지]</td>
+						<td>
+							<a href="../boardInput/notice">안녕하세요</a>
+						</td>
+						<td>21-02-12</td>
+						<td>12</td>
 					</tr>
-					<c:choose>
-						<c:when test="">
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-						</c:when>
-						<c:otherwise>
-							<tr><td colspan="5">공지사항이 없습니다</td></tr>
-						</c:otherwise>
-					</c:choose>
 				</table>
 			</div>
 			<div>

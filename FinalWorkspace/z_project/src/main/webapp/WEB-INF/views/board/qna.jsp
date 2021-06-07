@@ -33,24 +33,22 @@
 		</aside>
 		<div id="container_box">
 		<h3>Q&A</h3>
-			<div>
+		<button type="button" class="btn btn-outline-primary" id="b2" onclick="location.href='../boardInput/qnaInput'" style="margin: 0 0 0 1060px;">글쓰기</button>
+			<div style="margin: 10px 0 10px 0;">
 				<table border="1" style="width: 90%; border-bottom: 1px solid #D5D5D5;">
 					<tr>
 						<th>글번호</th><th>답변현황</th><th>제목</th><th>글쓴이</th><th>등록일</th><th>선택</th>
 					</tr>
-					<c:choose>
-						<c:when test="">
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-						</c:when>
-						<c:otherwise>
-							<tr><td colspan="5">작성한 질문이 없습니다</td></tr>
-						</c:otherwise>
-					</c:choose>
+						<tr>
+							<td>123</td>
+							<td>답변중</td>
+							<td>
+								<a href="${contextPath }/boardInput/QNA">반품은어떻게하나요</a> 
+							</td>
+							<td>홍길동</td>
+							<td>21-12-12</td>
+							<td></td>
+						</tr>
 				</table>
 			</div>
 			<div>

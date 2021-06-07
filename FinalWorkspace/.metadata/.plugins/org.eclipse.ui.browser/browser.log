@@ -5,3 +5,7 @@
 6월 02, 2021 09:34:58.391 NEW SESSION
 6월 02, 2021 09:34:58.391 [10588:2656:0602/093458.388:ERROR:device_event_log_impl.cc(214)] [09:34:58.388] USB: usb_device_handle_win.cc:1054 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
 6월 02, 2021 10:34:37.639 [10588:2656:0602/103437.639:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).
+
+6월 07, 2021 10:26:21.139 NEW SESSION
+6월 07, 2021 10:26:21.139 [8832:15204:0607/102621.136:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).
+6월 07, 2021 10:26:21.883 [8832:15204:0607/102621.882:ERROR:device_event_log_impl.cc(214)] [10:26:21.882] USB: usb_device_handle_win.cc:1058 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)

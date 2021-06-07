@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="contextPath" value="<%=request.getContextPath()%>" />
 <!DOCTYPE html>
 <html>
@@ -25,11 +25,11 @@
 </script>
 </head>
 <body>
-<jsp:include page="../header.jsp" />
-<div class="t">
+	<c:import url="../header.jsp"/>	
+	<div class="t">
 <jsp:include page="../adminCategory/category.jsp" />
 <div class="wrap">
-	<h1>상품관리</h1>
+	<h1 >상품관리</h1>
 	<div class="button">
 		<button type="button" class="btn btn-outline-primary" id="b1" onclick="">선택삭제</button>
 		<button type="button" class="btn btn-outline-primary" id="b2" onclick="">전체삭제</button>
@@ -63,32 +63,12 @@
 	
 </div>
 </div>
-<jsp:include page="../footer.jsp" />
+	<c:import url="../footer.jsp"/>
+	
+	<!-- Bootstrap core JS-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

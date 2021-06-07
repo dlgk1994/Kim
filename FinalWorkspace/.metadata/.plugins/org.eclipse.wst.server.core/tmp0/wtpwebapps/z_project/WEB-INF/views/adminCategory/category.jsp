@@ -10,7 +10,7 @@
 
 <style type="text/css">
 	.sideCategory{width: 200px; height: 500px;}
-	nav ul {list-style: none; line-height: 30px;}
+	nav ul {list-style: none; line-height: 30px; display: inline;}
 	nav ul li a{color: black; text-decoration: none;}
 	nav ul li a:hover {
 		color:blue;padding-bottom: 3px;
@@ -26,7 +26,7 @@
 
 
 <div class ="sideCategory">
-	<h2>관리자</h2>
+	<h2 >관리자</h2>
 	<nav>
 		<label><b>회원관리</b></label>
 		<ul>
@@ -38,9 +38,9 @@
 		</ul>
 		<label><b>회원관리</b></label>
 		<ul>
-			<li><a href="#">Q&A</a></li>
-			<li><a href="#">공지사항</a></li>
-			<li><a href="#">자주하는 질문</a></li>
+			<li><a href="${ contextPath }/board/qna">Q&A</a></li>
+			<li><a href="${ contextPath }/board/notice">공지사항</a></li>
+			<li><a href="${ contextPath }/board/faq">자주하는 질문</a></li>
 		</ul>
 	</nav>
 	

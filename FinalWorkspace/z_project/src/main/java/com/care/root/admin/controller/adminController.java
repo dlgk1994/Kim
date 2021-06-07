@@ -35,15 +35,27 @@ public class adminController {
 	}
 	
 	
+	@RequestMapping("boardInput/qnaInput")
+	public String qnaInput() {
+		return "boardInput/qnaInput";
+	}
 	
 	
 	
 	
+	@RequestMapping("boardInput/noticeInput")
+	public String noticeInput() {
+		return "boardInput/noticeInput";
+	}
+	@RequestMapping("boardInput/notice")
+	public String notice() {
+		return "boardInput/notice";
+	}
 	
-	
-	
-	
-	
+	@RequestMapping("boardInput/QNA")
+	public String QNA() {
+		return "boardInput/QNA";
+	}
 	
 	
 	

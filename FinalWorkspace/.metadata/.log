@@ -3301,3 +3301,30 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2021-06-04 17:23:17.503
 >>>>>>> kim
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-06-07 14:52:41.192
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-06-07 14:52:41.194
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2021-06-07 14:52:42.135
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+	at java.base/java.lang.String.charAt(String.java:712)
+	at org.eclipse.wst.jsdt.internal.core.index.DiskIndex.writeAllDocumentNames(DiskIndex.java:1025)
+	at org.eclipse.wst.jsdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:510)
+	at org.eclipse.wst.jsdt.internal.core.index.Index.save(Index.java:197)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:653)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:695)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:449)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:376)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-06-07 14:52:42.220
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-06-07 14:52:42.223
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!

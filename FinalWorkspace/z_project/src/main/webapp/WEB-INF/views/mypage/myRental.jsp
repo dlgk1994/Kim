@@ -38,22 +38,30 @@
 					<tr>
 						<th colspan="2">상품명</th><th>대여가격</th><th>반납일</th><th>선택</th>
 					</tr>
-					<c:choose>
-						<c:when test="">
-							<tr>
-								<td><img src="" style="width: 50px; height: 50px">상품명</td>
-								<td>대여가격</td>
-								<td>반납일</td>
-								<td>
-									<button type="button" onclick="location.href='${ contextPath }/mypage/reviewForm'">리뷰작성</button>
-									<button type="button" onclick="#">반납</button>
-								</td>
-							</tr>
-						</c:when>
-						<c:otherwise>
-							<tr><td colspan="5">주문내역이 없습니다</td></tr>
-						</c:otherwise>
-					</c:choose>
+					<c:if test="${ rentalList.size() == 0 }">
+						<tr><th colspan="5">주문내역이 없습니다</th></tr>
+					</c:if>
+					<c:forEach var="dto" items="${ rentalList }">
+						<tr>
+							<td colspan="2">
+								<img src="${ dto.cart_photo }" style="width: 50px; height: 50px">
+								<a href="#">${ dto.payment_title }</a>
+							</td>
+							<td>${ dto.payment_total }</td>
+							<td>반납일</td>
+							<td>
+								<button type="button" onclick="location.href='${ contextPath }/mypage/reviewForm'">리뷰작성</button>
+								<button type="button" onclick="#">반납</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="6">
+								<c:forEach	var="num" begin="1" end="${ repeat }">
+									<a href="${ contextPath }/mypage/myCart?num=${ num }">[${ num }]</a>
+								</c:forEach>
+							</td>
+						</tr>
+					</c:forEach>
 				</table>
 			</div>
 		</div>

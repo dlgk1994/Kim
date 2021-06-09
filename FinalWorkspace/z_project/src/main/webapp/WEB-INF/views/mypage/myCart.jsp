@@ -24,16 +24,66 @@
  	div#container_box { float: right; width: calc(100% - 200px - 20px); }
  	aside ul li { margin-bottom: 10px; list-style: none; }
 </style>
+<script type="text/javascript">
+	//체크박스 전체 체크 및 해제
+	function checkAll(selectAll)  { 
+		const checkboxes = document.getElementsByName('cartBox');
+	  
+		checkboxes.forEach((checkbox) => {
+	    	checkbox.checked = selectAll.checked;
+		});
+	}
+	//장바구니 체크 합계
+	function itemSum() {
+		alert('test')
+		var checkArr = []; //배열 초기화
+		$("input[name='cartBox']:checked").each(function(i) {
+	    	checkArr.push($(this).val()); //체크된 것만 값을 뽑아서 배열에 push
+	    });
+	    
+	    var sum = 0;
+		var cnt = checkArr.length;
+		/*
+		if(count == 0){
+			$("#total").html(sum);
+	    } else {
+	    	for(var i=0; i<count; i++ ){
+				if(cartBox[i].checked == true){
+					sum += parseInt(cartBox[i].value);
+				}
+			}
+
+			$("#total").html(sum);
+	    } */
+		for(var i=0; i<cnt; i++ ){
+			if(checkArr[i].checked == true){
+				sum += parseInt(checkArr[i].value);
+			}
+		}
+	}
+
+</script>
 </head>
 <body>
+<!-- 
+	<c:if test="${user == null}">
+		<script>
+			alert("권한이 없습니다.");
+			location.href = "/main";
+		</script>
+	</c:if>
+ -->
 	<c:import url="../header.jsp"/>	
+
 	<section id="container">
 		<aside>
 			<c:import url="../aside.jsp"/>				
 		</aside>
 		<div id="container_box">
 		<h3>장바구니</h3>
-			<div>
+		<!-- 모든 체크박스 체크 및 해제 -->
+		<input type="checkbox" name="allChk" onclick="checkAll(this);" value="selectall">		
+			<div class="checkboxForm">
 				<table border="1" style="width: 90%;">
 					<tr>
 						<th>상품선택</th><th colspan="2">상품명</th><th>대여가격</th><th>대여가능여부</th><th>선택</th>
@@ -43,9 +93,12 @@
 					</c:if>
 					<c:forEach var="dto" items="${ cartList }">
 						<tr>
-							<td><input type="checkbox"></td>
-							<td colspan="2"><img src="${ dto.cart_photo }" style="width: 50px; height: 50px">${ dto.product_name }</td>
-							<td>${ dto.payment_total }</td>
+							<td><input type="checkbox" name="cartBox" value="${ dto.payment_total }" onclick="itemSum();"></td>
+							<td colspan="2">
+								<img src="${ dto.cart_photo }" style="width: 50px; height: 50px">
+								<a href="#">${ dto.product_name }</a>
+							</td>
+							<td>상품가격</td>
 							<td>${ dto.cart_state }</td>
 							<td>
 								<button type="button" onclick="#">대여</button>
@@ -54,21 +107,27 @@
 						</tr>
 					</c:forEach>
 					<tr>
+						<td colspan="6" style="text-align: right;">
+							총 상품 금액 : <div id="total"> </div>
+						</td>
+					</tr>
+					<tr>
 						<td colspan="6">
-							<c:forEach	var="num" begin="1" end="${ repeat }">
-								<a href="${ contextPath }/mypage/myCart?num=${ num }">[${ num }]</a>
-							</c:forEach>
 							<button type="button">선택 상품 주문</button>
 							<button type="button">전체 상품 주문</button>
 						</td>
 					</tr>
 				</table>
+			<input type="hidden" id="userID" name="userID" value="${userForm.userID}"/> <!-- 현재 유저 -->
 			</div>
-			<div>
-				
+			<div style="">
+				<c:forEach	var="num" begin="1" end="${ repeat }">
+					<a href="${ contextPath }/mypage/myCart?num=${ num }">[${ num }]</a>
+				</c:forEach>
 			</div>
 		</div>
 	</section>
+	
 	<c:import url="../footer.jsp"/>
 	
 	<!-- Bootstrap core JS-->

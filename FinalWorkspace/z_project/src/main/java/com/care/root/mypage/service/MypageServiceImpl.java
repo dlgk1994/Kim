@@ -15,8 +15,6 @@ public class MypageServiceImpl implements MypageService {
 		int pageLetter = 3; //한페이지에 3개의 글
 		int allCount = mapper.mycartCount(); //총 글 개수 불러오기
 		
-		System.out.println(allCount);
-		
 		int repeat = allCount / pageLetter;
 		if(allCount % pageLetter != 0) { 
 			repeat += 1; //한페이지 추가 

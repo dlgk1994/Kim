@@ -34,8 +34,27 @@ public class adminController {
 		return "adminMember/adminMemberInfo";
 	}
 	
+	//QnA작성
+	@RequestMapping("boardInput/qnaInput")
+	public String qnaInput() {
+		return "boardInput/qnaInput";
+	}
 	
-	
+	//공지사항 작성
+	@RequestMapping("boardInput/noticeInput")
+	public String noticeInput() {
+		return "boardInput/noticeInput";
+	}
+	//공지사항 클릭하고 보기
+	@RequestMapping("boardInput/notice")
+	public String notice() {
+		return "boardInput/notice";
+	}
+	//QnA 클릭해서 확인
+	@RequestMapping("boardInput/QNA")
+	public String QNA() {
+		return "boardInput/QNA";
+	}
 	
 	
 	

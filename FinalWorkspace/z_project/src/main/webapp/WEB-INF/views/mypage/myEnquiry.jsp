@@ -41,10 +41,15 @@
 					<c:choose>
 						<c:when test="">
 							<tr>
-								<td><img src="" style="width: 50px; height: 50px"></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td>글번호</td>
+								<td>답변현황</td>
+								<td>제목</td>
+								<td>글쓴이</td>
+								<td>등록일</td>
+								<td>
+									<button type="button" onclick="#">수정</button>
+									<button type="button" onclick="#">삭제</button>
+								</td>
 							</tr>
 						</c:when>
 						<c:otherwise>

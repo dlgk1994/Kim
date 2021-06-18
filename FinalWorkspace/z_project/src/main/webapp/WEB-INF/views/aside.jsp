@@ -13,9 +13,9 @@
 </head>
 <body>
 	<c:choose>
-		<c:when test=""> <!-- 관리자가 로그인 하면 관리자용 카테고리가 옆에 뜨고 일반 사용자가 로그인하면 사용자에 맞춘 카테고리뜸 
-											우선 관리자용으로 되있는데 login == admin 아거 지우면 일반 사용자용-->
-			<c:import url="../adminCategory/category.jsp"/>
+		<c:when test=""><!--  관리자가 로그인 하면 관리자용 카테고리가 옆에 뜨고 일반 사용자가 로그인하면 사용자에 맞춘 카테고리뜸 
+											우선 관리자용으로 되있는데 login == admin 아거 지우면 일반 사용자용
+			<c:import url="../adminCategory/category.jsp"/>-->
 		</c:when>
 		<c:otherwise>
 			<aside>

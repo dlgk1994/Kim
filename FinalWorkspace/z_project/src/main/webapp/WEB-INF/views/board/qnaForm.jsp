@@ -20,7 +20,7 @@
 <style type="text/css">
 	section#container { padding: 20px 0; border-top: 2px solid #eee; border-bottom: 2px solid #eee; }
  	section#container::after { content: ""; display: block; clear: both; }
-	aside { float: left; width: 200px; padding: 0 0 0 10px; }
+	aside { float: left; width: 200px; padding: 0 0 0 5px; }
  	div#container_box { float: right; width: calc(100% - 200px - 20px); }
  	aside ul li { margin-bottom: 10px; list-style: none; }
 </style>
@@ -32,36 +32,18 @@
 			<c:import url="../aside.jsp"/>				
 		</aside>
 		<div id="container_box">
-		<h3>내 리뷰</h3>
-			<div>
-				<table border="1" style="width: 90%;">
-					<tr>
-						<th colspan="2">상품명</th><th>내용</th><th>아이디</th><th>등록일</th><th>선택</th>
-					</tr><c:if test="${ reviewList.size() == 0 }">
-						<tr><th colspan="5">작성한 리뷰가 없습니다</th></tr>
-					</c:if>
-					<c:forEach var="dto" items="${ reviewList }">
-						<tr>
-							<td colspan="2">
-								<img src="${ dto.cart_photo }" style="width: 50px; height: 50px">
-								<a href="#">${ dto.product_name }</a>
-							</td>
-							<td>내용</td>
-							<td>아이디</td>
-							<td>등록일</td>
-							<td>
-								<button type="button" onclick="#">수정</button>
-								<button type="button" onclick="#">삭제</button>
-							</td>
-						</tr>
-					</c:forEach>
-				</table>
-			</div>
-			<div>
-				<c:forEach	var="num" begin="1" end="${ repeat }">
-					<a href="${ contextPath }/mypage/myReview?num=${ num }">[${ num }]</a>
-				</c:forEach>
-			</div>
+		<h3>문의글 작성</h3>
+			<form action="${ contextPath }/board/qnaSave" method="post" enctype="multipart/form-data">
+				<b>작성자</b><br>
+				<input type="text" name="member_id" value="" readonly><hr> <!-- 읽기 전용, 수정 불가 -->
+				<b>제목</b><br>
+				<input type="text" name="enquiry_subject" size="50"><hr>
+				<b>내용</b><br>
+				<textarea rows="10" cols="50" name="enquiry_content"></textarea><hr>
+				<input type="submit" value="글쓰기">
+				<input type="button" value="취소" onclick="history.back()">
+			</form>
+			
 		</div>
 	</section>
 	<c:import url="../footer.jsp"/>

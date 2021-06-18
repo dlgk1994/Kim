@@ -22,4 +22,8 @@
 	<select id="mycartCount" resultType="Integer">
 		select count(*) from cart
 	</select>
+	<!-- 장바구니 내역 삭제 -->
+	<delete id="deleteCart">
+		delete from cartd where write_no=#{write_no}
+	</delete>
 </mapper>

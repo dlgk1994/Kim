@@ -33,17 +33,17 @@
 		</aside>
 		<div id="container_box">
 		
-		<h3>Q&A</h3>
+		<h3>검색 결과</h3>
 		<div>
-		<input type="button" onclick="location.href='${ contextPath }/board/qnaForm'" value="글쓰기">
+		<input type="button" onclick="location.href='${ contextPath }/board/qna'" value="전체목록">
 			<table border="1" style="width: 90%;">
 				<tr>
-					<th>글번호</th><th>답변현황</th><th>제목</th><th>글쓴이</th><th>등록일</th>
+					<th>글번호</th><th>답변현황</th><th>제목</th><th>글쓴이</th><th>등록일</th><th>선택</th>
 				</tr>
-				<c:if test="${ qnaList.size() == 0 }">
+				<c:if test="${ searchQna.size() == 0 }">
 					<tr><th colspan="5">질문 내역이 없습니다</th></tr>
 				</c:if>
-				<c:forEach var="dto" items="${ qnaList }">
+				<c:forEach var="dto" items="${ searchQna }">
 				<tr>
 					<td>${ dto.enquiry_no }</td>
 					<td>${ dto.enquiry_state }</td>
@@ -52,6 +52,7 @@
 					</td>
 					<td>${ dto.member_id }</td>
 					<td>${ dto.enquiry_writedate }</td>
+					<td></td>
 				</tr>
 				</c:forEach>
 			</table>
@@ -70,12 +71,6 @@
 			   <input type="text" name="keyword" value="${ keyword }">
 			   <input type="submit" id="searchBtn" value="검색">
 		</form>
-		</div>
-		
-		<div>
-			<c:forEach var="num" begin="1" end="${ repeat }">
-				<a href="${ contextPath }/board/qna?num=${ num }">[${ num }]</a>
-			</c:forEach>
 		</div>
 		</div>
 	</section>

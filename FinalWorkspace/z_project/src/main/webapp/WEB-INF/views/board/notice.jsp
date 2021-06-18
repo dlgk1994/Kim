@@ -30,8 +30,8 @@
 	<section id="container">
 		<aside>
 			<c:choose> 
-				<c:when test="${login == admin }"><!-- 관리자 로그인 하면 관리자에 맞게 왼쪽에 카텔고리 바뀜 -->
-					<jsp:include page="../adminCategory/category.jsp" />
+				<c:when test=""><!-- 관리자 로그인 하면 관리자에 맞게 왼쪽에 카텔고리 바뀜 
+					<jsp:include page="../adminCategory/category.jsp" />-->
 					
 				</c:when>
 				<c:otherwise>
@@ -42,8 +42,9 @@
 		<div id="container_box">
 		<h3>공지사항</h3>
 		<c:choose>
-			<c:when test="${login == admin }"> <!-- ${login == admin }  관리자가 로그인했을때만 글 쓰기 버튼 보이기 -->
+			<c:when test=""> <!-- ${login == admin }  관리자가 로그인했을때만 글 쓰기 버튼 보이기 
 				<button type="button" class="btn btn-outline-primary" id="b2" onclick="location.href='../boardInput/noticeInput'" style="margin: 0px 0 0 1060px;">글쓰기</button>
+			-->
 			</c:when>
 		</c:choose>
 			
@@ -51,18 +52,23 @@
 			<table border="1" style="width: 90%; border-bottom: 1px solid #D5D5D5;">
 				<tr>
 					<th>글번호</th><th>공지분류</th><th>제목</th><th>등록일</th><th>조회수</th>
-				</tr>					
-					<tr><!-- td값 db에서 가져오기 -->
-						<td>12</td>
-						<td>[일반공지]</td>
-						<td>
-							<a href="../boardInput/notice">안녕하세요</a>
-						</td>
-						<td>21-02-12</td>
-						<td>12</td>
-					</tr>
-				</table>
-			</div>
+				</tr>
+				<c:if test="${ noticeList.size() == 0 }">
+					<tr><th colspan="5">작성된 공지사항이 없습니다</th></tr>
+				</c:if>
+				<c:forEach var="dto" items="${ noticeList }">					
+				<tr><!-- td값 db에서 가져오기 -->
+					<td>${ dto.notice_no }</td>
+					<td>${ dto.notice_group }</td>
+					<td>
+						<a href="../boardInput/notice">${ dto.notice_title }</a>
+					</td>
+					<td>${ dto.notice_writedate }</td>
+					<td>${ dto.notice_hit }</td>
+				</tr>
+				</c:forEach>
+			</table>
+		</div>
 			<div>
 				<input type="text" name="search">
 				<button type="button">검색</button>

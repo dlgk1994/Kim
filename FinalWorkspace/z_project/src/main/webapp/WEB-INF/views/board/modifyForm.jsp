@@ -32,17 +32,19 @@
 			<c:import url="../aside.jsp"/>				
 		</aside>
 		<div id="container_box">
-		<h3>문의 수정</h3>
-			<div>
-				<table border="1">
-					<tr><td><img src="" style="width: 50px; height: 50px"></td><td>상품명</td></tr>
-					<tr><td>아이디 ( 수정불가 )</td></tr>
-					<tr><td><textarea rows="" cols="" placeholder="내용을 입력해주세요"></textarea></td></tr>
-					<tr><th colspan="2">
-						<button type="button" onclick="#">수정</button>
-						<button type="button" onclick="history.back()">취소</button>
-				</table>
-			</div>
+		<h3>00 님의 문의글 수정</h3>
+			<input type="hidden" value="${ selectQna.enquiry_no }"/>
+			<form action="${ contextPath }/board/modifySave?enquiry_no=${ selectQna.enquiry_no }" method="post" enctype="multipart/form-data">
+				<b>작성자</b><br>
+				<input type="text" name="member_id" value="${ selectQna.member_id }" readonly><hr> <!-- 읽기 전용, 수정 불가 -->
+				<b>제목</b><br>
+				<input type="text" name="enquiry_subject" size="50" value="${ selectQna.enquiry_subject }"><hr>
+				<b>내용</b><br>
+				<textarea rows="10" cols="50" name="enquiry_content">${ selectQna.enquiry_content }</textarea><hr>
+				
+				<input type="submit" value="수정">
+				<input type="button" value="취소" onclick="history.back()">
+			</form>
 		</div>
 	</section>
 	<c:import url="../footer.jsp"/>

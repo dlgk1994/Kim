@@ -9,11 +9,10 @@
 <title>Insert title here</title>
 <style type="text/css">
 	.t{width: 1500px; height: 1000px;  margin: auto; }
-<<<<<<< HEAD
+
 	.wrap{width: 1200px;height: 800px;margin: -490px 0 0 200px;}
-=======
-	.wrap{width: 1200px;height: 800px; margin: -490px 0 0 200px;}
->>>>>>> kim
+
+
 	.memberName{margin-left: 470px;}
 	.rentalStatus{margin: 40px 0 0 530px;}
 	

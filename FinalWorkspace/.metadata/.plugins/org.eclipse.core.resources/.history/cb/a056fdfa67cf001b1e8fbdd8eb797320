@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.care.root.adminProduct.mtbatis.productMapper">
+	<resultMap type="com.care.root.admin.product.dto.productDTO" id="product">
+		<id property="productNum" column="product_num"/>
+		<result property="productName" column="product_name"/>
+		<result property="productTitle" column="product_title"/>
+		<result property="productCategory" column="product_category"/>
+		<result property="productContent" column="product_content"/>
+		<!--<result property="productPhoto1" column="product_photo1"/>-->
+		<result property="productDate" column="product_data"/>
+		<result property="productCompany" column="product_company"/>
+		<result property="productThumbnail" column="product_thumbnail"/>
+		<result property="productQuantity" column="product_quantity"/>
+		<result property="productPee" column="product_pee"/>
+	</resultMap>
+	<select id="adminProductList" resultMap="product">
+		select * from product order by product_data desc
+		
+	</select>
+	<insert id="productSave">
+		insert into product(product_num,product_name,product_title,product_category,product_content,product_company,product_thumbnail,product_quantity,product_pee,product_photo1)
+		values(#{productNum},#{productName},#{productTitle},#{productCategory},#{productContent},#{productCompany},#{productThumbnail},#{productQuantity},#{productPee},#{productPhoto1})
+	</insert>
+	
+	<select id="adminProductView" resultMap="product">
+		select * from product where product_num=#{productNum}
+	</select>
+	
+	<update id="productModify">
+		update product set product_name=#{productName}, product_title=#{productTitle}, product_category=#{productCategory},product_content=#{productContent},product_company=#{productCompany},
+		product_thumbnail=#{productThumbnail},product_quantity=#{productQuantity},product_pee=#{productPee} where product_num=#{productNum}
+	</update>
+	
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

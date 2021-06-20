@@ -1,0 +1,14 @@
+1623211141077	Rename package 'dto'
+1623211149108	Rename package 'mybatis'
+1623211159199	Rename package 'service'
+1623225587685	Rename package 'com.care.root.admin.product.mybatis'
+1623225635103	Rename resource 'adminProduct.xml'
+1623226947284	Rename package 'com.care.root.admin.mybatis'
+1623227309007	Rename resource 'adminProduct'
+1623227341611	Rename resource 'Product'
+1623494464452	Rename package 'com.care.root.mybatis.adminProduct'
+1623497256821	Rename resource 'adminProductModify.jsp'
+1623497542128	Rename resource 'adminProductView.jsp'
+1623500829518	Delete element
+1623504598968	Delete element
+1623504948632	Delete element

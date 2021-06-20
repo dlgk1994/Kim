@@ -41,12 +41,13 @@
 					<c:choose>
 						<c:when test="">
 							<tr>
-								<td><img src="" style="width: 50px; height: 50px"></td>
-								<td></td>
-								<td></td>
+								<td><img src="" style="width: 50px; height: 50px">상품명</td>
+								<td>내용</td>
+								<td>아이디</td>
+								<td>등록일</td>
 								<td>
-									<button type="button">수정</button>
-									<button type="button">삭제</button>
+									<button type="button" onclick="#">수정</button>
+									<button type="button" onclick="#">삭제</button>
 								</td>
 							</tr>
 						</c:when>

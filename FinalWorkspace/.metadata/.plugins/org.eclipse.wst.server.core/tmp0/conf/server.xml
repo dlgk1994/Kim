@@ -155,7 +155,7 @@
 
       <!--<Context docBase="Final" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:Final"/>
       <Context docBase="z_project" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:z_project"/> -->
-      <Context docBase="D:\Kim\FinalWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Kim\FinalWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\z_project" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:z_project"/></Host>
+      <Context docBase="D:\project\Kim\FinalWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\project\Kim\FinalWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\z_project" path="/root" reloadable="true" source="org.eclipse.jst.jee.server:z_project"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -30,11 +30,11 @@
 	<nav>
 		<label><b>회원관리</b></label>
 		<ul>
-			<li><a href="${contextPath }/adminProductList">상품조회</a></li>
+			<li><a href="${contextPath }/adminProduct/adminProductList">상품조회</a></li>
 		</ul>
 		<label><b>회원관리</b></label>
 		<ul>
-			<li><a href="${contextPath }/adminMemberList">회원관리</a></li>
+			<li><a href="${contextPath }/adminMember/adminMemberList">회원관리</a></li>
 		</ul>
 		<label><b>회원관리</b></label>
 		<ul>

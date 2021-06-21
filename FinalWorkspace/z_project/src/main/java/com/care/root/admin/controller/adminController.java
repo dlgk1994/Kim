@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.care.root.admin.product.dto.productDTO;
 import com.care.root.admin.product.service.productFileService;
 import com.care.root.admin.product.service.productService;
 
@@ -82,19 +84,8 @@ public class adminController {
 		out.print(message);
 	}
 	
-//	@GetMapping("adminProduct/delete")
-//	public void adminProductDelete(@RequestParam(value="productNum",required=false) String productNum,
-//			 						@RequestParam(value="productThumbnail",required=false) String productThumbnail,
-//									HttpServletRequest request, 
-//									 HttpServletResponse response) throws Exception{
-//		System.out.println("컨트롤러 상품코드 : "+productNum);
-//		String message = ps.productDelete(productNum, productThumbnail, request);
-//		PrintWriter out = response.getWriter();
-//		response.setContentType("text/html; charset=utf-8");
-//		out.print(message);
-//		
-//		
-//	}
+	
+	
 	
 	
 	

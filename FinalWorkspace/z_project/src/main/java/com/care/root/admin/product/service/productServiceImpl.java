@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -100,6 +101,8 @@ public class productServiceImpl implements productService{
 		
 	}
 
+	
+
 //	@Override
 //	public String productDelete(String productNum, String productThumbnail, HttpServletRequest request) {
 //		System.out.println("서비스 상품코드 : " + productNum);
@@ -119,6 +122,10 @@ public class productServiceImpl implements productService{
 //		return pfs.getMessage(mDTO);
 //		
 //	}
+	
+	
+
+	
 
 
 

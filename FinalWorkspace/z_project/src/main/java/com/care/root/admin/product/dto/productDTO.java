@@ -18,8 +18,7 @@ public class productDTO {
 	private String productThumbnail; // 상품 섬네일
 	private String productQuantity; // 상품 수량 -
 	private String productPee; // 상품가격 -
-	
-	
+
 	
 	public String getProductNum() {
 		return productNum;

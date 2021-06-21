@@ -25,6 +25,10 @@
 	
 	
 	
+	
+
+	
+	
 </script>
 </head>
 <body>
@@ -56,7 +60,7 @@
 	    <tbody>
 	    <c:forEach var="dto" items="${adminProductList }">
 	      <tr>
-	      	<td><input type="checkbox" name="choice" value="${dto.productNum}"></td>
+	      	<td><input type="checkbox" class="choice" name="choice" id="choice" value="${dto.productNum}"></td>
 	        <td>${dto.productNum }</td>
 	        <td><a href="${contextPath }/adminProduct/adminProductView?productNum=${dto.productNum}">${dto.productTitle }</a></td>
 	        <td>${dto.productPee }</td>
@@ -66,12 +70,17 @@
 	    </tbody>
 	  </table>
 	  	<div class="button">
-		  	<input type="button" class="btn btn-outline-primary" id="b1" onclick="deleteValue()" value="선택삭제"/>
+		  	<input type="button" class="btn btn-outline-primary" id="b1" onclick="" value="선택삭제"/>
 			<button type="button" class="btn btn-outline-primary" id="b2" onclick="">전체삭제</button>
 		</div>
 	  
 	</div>
 	<button type="button" class="btn btn-outline-primary" id="b3" onclick="input()">상품등록</button>
+	
+	
+	
+	
+	
 	
 </div>
 </div>

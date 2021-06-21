@@ -29,4 +29,5 @@
 	<!-- 연동할 파일에 대한 경로 -->
 	<mybatis-spring:scan base-package="com.care.root.mypage.mybatis"/>
 	<mybatis-spring:scan base-package="com.care.root.adminProduct.mtbatis"/>
+	<mybatis-spring:scan base-package="com.care.root.board.mybatis"/>
 </beans>

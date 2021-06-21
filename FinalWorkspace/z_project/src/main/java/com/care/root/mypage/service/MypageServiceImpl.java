@@ -25,4 +25,15 @@ public class MypageServiceImpl implements MypageService {
 		
 		model.addAttribute("cartList", mapper.myCart(start, end));
 	}
+
+	@Override
+	public void deleteCart(int write_no, String cart_photo) {
+		MypageFileService mfs = new MypageFileServiceImpl();
+		int result = mapper.deleteCart(write_no); //성공 시 1 반환
+		
+		if(result == 1) {
+			mfs.deleteImage(cart_photo);
+		}
+		
+	}
 }

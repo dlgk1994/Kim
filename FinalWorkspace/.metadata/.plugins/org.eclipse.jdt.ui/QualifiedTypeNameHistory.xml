@@ -36,4 +36,6 @@
     <fullyQualifiedTypeName name="com.care.root.admin.product.service.productFileServiceImpl"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="com.care.root.board.service.BoardServiceImpl"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 </qualifiedTypeNameHistroy>

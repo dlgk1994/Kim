@@ -9,8 +9,10 @@ import com.care.root.mypage.dto.CartDTO;
 public interface MypageMapper {
 	//장바구니 목록
 	public ArrayList<CartDTO> myCart(@Param("s") int start, @Param("e") int end);
-	//장바구니 목록 페이징
+	//장바구니 전체 목록 수 카운트
 	public int mycartCount();
+	//장바구니 내역 삭제
+	public int deleteCart(int write_no);
 	//주문 내역
 	
 	//주문 내역 페이징

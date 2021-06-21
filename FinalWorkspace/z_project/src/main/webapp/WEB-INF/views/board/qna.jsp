@@ -29,40 +29,54 @@
 	<c:import url="../header.jsp"/>	
 	<section id="container">
 		<aside>
-			<c:choose> 
-				<c:when test="${login == admin }"> <!-- 관리자 로그인 하면 관리자에 맞게 왼쪽에 카텔고리 바뀜 -->
-					<jsp:include page="../adminCategory/category.jsp" />
-				</c:when>
-				<c:otherwise>
-					<c:import url="../aside.jsp"/>
-				</c:otherwise>
-			</c:choose>					
+			<c:import url="../aside.jsp"/>				
 		</aside>
 		<div id="container_box">
 		
 		<h3>Q&A</h3>
-		<button type="button" class="btn btn-outline-primary" id="b2" onclick="location.href='../boardInput/qnaInput'" style="margin: 0 0 0 1060px;">글쓰기</button>
-			<div style="margin: 10px 0 10px 0;">
-				<table border="1" style="width: 90%; border-bottom: 1px solid #D5D5D5;">
-					<tr>
-						<th>글번호</th><th>답변현황</th><th>제목</th><th>글쓴이</th><th>등록일</th><th>선택</th>
-					</tr>
-						<tr>
-							<td>123</td>
-							<td>답변중</td>
-							<td>
-								<a href="${contextPath }/boardInput/QNA">반품은어떻게하나요(db에서 값가져오기)</a> 
-							</td>
-							<td>홍길동</td>
-							<td>21-12-12</td>
-							<td></td>
-						</tr>
-				</table>
-			</div>
-			<div>
-				<input type="text" name="search">
-				<button type="button">검색</button>
-			</div>
+		<div>
+		<input type="button" onclick="location.href='${ contextPath }/board/qnaForm'" value="글쓰기">
+			<table border="1" style="width: 90%;">
+				<tr>
+					<th>글번호</th><th>답변현황</th><th>제목</th><th>글쓴이</th><th>등록일</th>
+				</tr>
+				<c:if test="${ qnaList.size() == 0 }">
+					<tr><th colspan="5">질문 내역이 없습니다</th></tr>
+				</c:if>
+				<c:forEach var="dto" items="${ qnaList }">
+				<tr>
+					<td>${ dto.enquiry_no }</td>
+					<td>${ dto.enquiry_state }</td>
+					<td>
+						<a href="${ contextPath }/board/selectQna?enquiry_no=${ dto.enquiry_no }">${ dto.enquiry_subject }</a> 
+					</td>
+					<td>${ dto.member_id }</td>
+					<td>${ dto.enquiry_writedate }</td>
+				</tr>
+				</c:forEach>
+			</table>
+		</div>
+		<div>
+		<form action="${ contextPath }/board/searchQna" method="post">
+			<select name="search_option">
+	        	<option value="member_id"<c:if test="${search_option eq 'member_id'}">selected</c:if>>작성자</option>
+	   			
+	        	<option value="enquiry_subject"<c:if test="${search_option eq 'enquiry_subject'}">selected</c:if>>제목</option>
+	    
+	        	<option value="enquiry_content"<c:if test="${search_option eq 'enquiry_content'}">selected</c:if>>내용</option>
+	   			
+	   			<option value="all"<c:if test="${search_option eq 'all'}">selected</c:if>>작성자+내용+제목</option>
+	   		</select>
+			   <input type="text" name="keyword" value="${ keyword }">
+			   <input type="submit" id="searchBtn" value="검색">
+		</form>
+		</div>
+		
+		<div>
+			<c:forEach var="num" begin="1" end="${ repeat }">
+				<a href="${ contextPath }/board/qna?num=${ num }">[${ num }]</a>
+			</c:forEach>
+		</div>
 		</div>
 	</section>
 	<c:import url="../footer.jsp"/>

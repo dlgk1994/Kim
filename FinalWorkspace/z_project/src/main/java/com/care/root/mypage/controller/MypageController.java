@@ -15,9 +15,26 @@ public class MypageController {
 	
 	//장바구니
 	@RequestMapping("myCart")
-	public String myCart(Model model, 
-			@RequestParam(value="num", required=false, defaultValue="1") int num) {
+	public String myCart(Model model, @RequestParam(value="num", required=false, defaultValue="1") int num) {
 		ms.myCart(model, num); //리스트 -> model에 저장
+		return "mypage/myCart";
+	}
+	/*
+	@RequestMapping(value="/totalPay", method=RequestMethod.POST, produces="application/json; charset=utf-8") 
+	@ResponseBody
+	public int totalpay(@RequestParam(value = "checkArr[]") List<String> chArr) {
+		System.out.println("연결");
+		int sum=0;
+		
+		for(String s : chArr) {
+			sum += Integer.parseInt(s);
+		}
+		return sum;
+	}*/
+	//장바구니 내역 삭제
+	@RequestMapping("deleteCart")
+	public String deleteCart(@RequestParam int write_no, @RequestParam String cart_photo) {
+		ms.deleteCart(write_no, cart_photo);
 		return "mypage/myCart";
 	}
 	//주문 내역
@@ -25,6 +42,7 @@ public class MypageController {
 	public String myRental() {
 		return "mypage/myRental";
 	}
+	
 	//내 리뷰
 	@RequestMapping("myReview")
 	public String myReview() {

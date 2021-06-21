@@ -1,7 +1,3 @@
 INDEX VERSION 1.131
 D:\project\Kim\FinalWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2391287434.index
 \z_project\src\main\java
-D:\project\Kim\FinalWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3420837915.index
-\z_project\src\main\java
-D:\project\Kim\FinalWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\122303853.index
-\z_project\src\main\java

@@ -14,4 +14,5 @@ public interface productMapper {
 	public int productModify(productDTO dto);
 	//public int delete(String productNum);
 	
+	
 }

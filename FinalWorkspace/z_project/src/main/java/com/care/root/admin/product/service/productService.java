@@ -14,4 +14,5 @@ public interface productService {
 	public void adminProductView(String productNum,Model model);
 	public String productModify(MultipartHttpServletRequest mul, HttpServletRequest request);
 	//public String productDelete(String productNum, String productThumbnail,HttpServletRequest request);
+	
 }

@@ -47,28 +47,28 @@
 	<aside>
 		<h3>카테고리</h3>
 		<ul>
-			<li class="main"><a href="#">핸드폰</a>
+			<li class="main"><a href="/ProductDetail/product?c=100&l=1">핸드폰</a>
 				<ul class="sub" style="display:none">
-					<li><a href="#">apple</a></li>
-					<li><a href="#">samsung</a></li>
+					<li><a href="/ProductDetail/product?c=101&l=2">apple</a></li>
+					<li><a href="/ProductDetail/product?c=102&l=2">samsung</a></li>
 				</ul>
 			</li>
-			<li class="main"><a href="#">태블릿PC</a>
+			<li class="main"><a href="/ProductDetail/product?c=200&l=1">태블릿PC</a>
 				<ul class="sub" style="display:none">
-					<li><a href="#">apple</a></li>
-					<li><a href="#">samsung</a></li>
+					<li><a href="/ProductDetail/product?c=201&l=2">apple</a></li>
+					<li><a href="/ProductDetail/product?c=202&l=2">samsung</a></li>
 				</ul>
 			</li>
-			<li class="main"><a href="#">스마트워치</a>
+			<li class="main"><a href="/ProductDetail/product?c=300&l=1">스마트워치</a>
 				<ul class="sub" style="display:none">
-					<li><a href="#">apple</a></li>
-					<li><a href="#">samsung</a></li>
+					<li><a href="/ProductDetail/product?c=301&l=2">apple</a></li>
+					<li><a href="/ProductDetail/product?c=302&l=2">samsung</a></li>
 				</ul>
 			</li>
-			<li class="main"><a href="#">블루투스 이어폰</a>
+			<li class="main"><a href="/ProductDetail/product?c=400&l=1">블루투스 이어폰</a>
 				<ul class="sub" style="display:none">
-					<li><a href="#">apple</a></li>
-					<li><a href="#">samsung</a></li>
+					<li><a href="/ProductDetail/product?c=401&l=2">apple</a></li>
+					<li><a href="/ProductDetail/product?c=402&l=2">samsung</a></li>
 				</ul>
 			</li>
 		</ul>

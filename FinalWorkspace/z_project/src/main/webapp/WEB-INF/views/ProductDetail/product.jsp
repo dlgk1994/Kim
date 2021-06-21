@@ -74,6 +74,7 @@
     </style>
 </head>
 <body>
+	
     <c:import url="../header.jsp"/>
     <!-- Section-->
     <section>

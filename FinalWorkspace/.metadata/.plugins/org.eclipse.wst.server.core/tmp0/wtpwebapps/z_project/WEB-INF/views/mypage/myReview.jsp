@@ -37,24 +37,30 @@
 				<table border="1" style="width: 90%;">
 					<tr>
 						<th colspan="2">상품명</th><th>내용</th><th>아이디</th><th>등록일</th><th>선택</th>
-					</tr>
-					<c:choose>
-						<c:when test="">
-							<tr>
-								<td><img src="" style="width: 50px; height: 50px"></td>
-								<td></td>
-								<td></td>
-								<td>
-									<button type="button">수정</button>
-									<button type="button">삭제</button>
-								</td>
-							</tr>
-						</c:when>
-						<c:otherwise>
-							<tr><td colspan="5">작성한 리뷰가 없습니다</td></tr>
-						</c:otherwise>
-					</c:choose>
+					</tr><c:if test="${ reviewList.size() == 0 }">
+						<tr><th colspan="5">작성한 리뷰가 없습니다</th></tr>
+					</c:if>
+					<c:forEach var="dto" items="${ reviewList }">
+						<tr>
+							<td colspan="2">
+								<img src="${ dto.cart_photo }" style="width: 50px; height: 50px">
+								<a href="#">${ dto.product_name }</a>
+							</td>
+							<td>내용</td>
+							<td>아이디</td>
+							<td>등록일</td>
+							<td>
+								<button type="button" onclick="#">수정</button>
+								<button type="button" onclick="#">삭제</button>
+							</td>
+						</tr>
+					</c:forEach>
 				</table>
+			</div>
+			<div>
+				<c:forEach	var="num" begin="1" end="${ repeat }">
+					<a href="${ contextPath }/mypage/myReview?num=${ num }">[${ num }]</a>
+				</c:forEach>
 			</div>
 		</div>
 	</section>

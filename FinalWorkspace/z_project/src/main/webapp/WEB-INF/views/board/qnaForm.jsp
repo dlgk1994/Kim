@@ -32,6 +32,10 @@
 			<c:import url="../aside.jsp"/>				
 		</aside>
 		<div id="container_box">
+<<<<<<< HEAD
+<<<<<<< HEAD:FinalWorkspace/z_project/src/main/webapp/WEB-INF/views/board/qnaForm.jsp
+=======
+>>>>>>> kim
 		<h3>문의글 작성</h3>
 			<form action="${ contextPath }/board/qnaSave" method="post" enctype="multipart/form-data">
 				<b>작성자</b><br>
@@ -44,6 +48,22 @@
 				<input type="button" value="취소" onclick="history.back()">
 			</form>
 			
+<<<<<<< HEAD
+=======
+		<h3>문의 수정</h3>
+			<div>
+				<table border="1">
+					<tr><td><img src="" style="width: 50px; height: 50px"></td><td>상품명</td></tr>
+					<tr><td>아이디 ( 수정불가 )</td></tr>
+					<tr><td><textarea rows="" cols="" placeholder="내용을 입력해주세요"></textarea></td></tr>
+					<tr><th colspan="2">
+						<button type="button" onclick="#">수정</button>
+						<button type="button" onclick="history.back()">취소</button>
+				</table>
+			</div>
+>>>>>>> kim:FinalWorkspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/z_project/WEB-INF/views/mypage/enquiryForm.jsp
+=======
+>>>>>>> kim
 		</div>
 	</section>
 	<c:import url="../footer.jsp"/>

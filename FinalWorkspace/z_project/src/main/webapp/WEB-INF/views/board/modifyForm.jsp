@@ -32,6 +32,10 @@
 			<c:import url="../aside.jsp"/>				
 		</aside>
 		<div id="container_box">
+<<<<<<< HEAD
+<<<<<<< HEAD:FinalWorkspace/z_project/src/main/webapp/WEB-INF/views/board/modifyForm.jsp
+=======
+>>>>>>> kim
 		<h3>00 님의 문의글 수정</h3>
 			<input type="hidden" value="${ selectQna.enquiry_no }"/>
 			<form action="${ contextPath }/board/modifySave?enquiry_no=${ selectQna.enquiry_no }" method="post" enctype="multipart/form-data">
@@ -45,6 +49,23 @@
 				<input type="submit" value="수정">
 				<input type="button" value="취소" onclick="history.back()">
 			</form>
+<<<<<<< HEAD
+=======
+		<h3>리뷰 작성</h3>
+			<div>
+				<table border="1">
+					<tr><td><img src="" style="width: 50px; height: 50px"></td><td>( 상품명 )</td></tr>
+					<tr><th colspan="2"><img src="" style="width: 50px; height: 50px"></th></tr>
+					<tr><td>아이디 ( 수정불가 )</td></tr>
+					<tr><td><textarea rows="" cols="" placeholder="내용을 입력해주세요"></textarea></td></tr>
+					<tr><th colspan="2">
+						<button type="button">수정</button>
+						<button type="button" onclick="history.back()">취소</button>
+				</table>
+			</div>
+>>>>>>> kim:FinalWorkspace/.metadata/.plugins/org.eclipse.core.resources/.history/ae/a0fd1d12a0d1001b1c84aaf421a81912
+=======
+>>>>>>> kim
 		</div>
 	</section>
 	<c:import url="../footer.jsp"/>

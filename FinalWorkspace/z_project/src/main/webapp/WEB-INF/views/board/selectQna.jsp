@@ -32,6 +32,10 @@
 			<c:import url="../aside.jsp"/>				
 		</aside>
 		<div id="container_box">
+<<<<<<< HEAD
+<<<<<<< HEAD:FinalWorkspace/z_project/src/main/webapp/WEB-INF/views/board/selectQna.jsp
+=======
+>>>>>>> kim
 		<h3>00 님의 문의글</h3>
 			<form action="" method="post" enctype="multipart/form-data">
 			<input type="hidden" value="${ selectQna.enquiry_no }"/>
@@ -47,6 +51,36 @@
 				<input type="button" value="삭제" onclick="location.href='${ contextPath }/board/deleteQna?enquiry_no=${ selectQna.enquiry_no }'">
 				<input type="button" value="답글달기" onclick="">
 				<input type="button" value="리스트로 돌아가기" onclick="location.href='${ contextPath }/board/qna'">
+<<<<<<< HEAD
+=======
+		<h3>내 리뷰</h3>
+			<div>
+				<table border="1" style="width: 90%;">
+					<tr>
+						<th colspan="2">상품명</th><th>내용</th><th>아이디</th><th>등록일</th><th>선택</th>
+					</tr>
+					<c:choose>
+						<c:when test="">
+							<tr>
+								<td><img src="" style="width: 50px; height: 50px">상품명</td>
+								<td>내용</td>
+								<td>아이디</td>
+								<td>등록일</td>
+								<td>
+									<button type="button" onclick="#">수정</button>
+									<button type="button" onclick="#">삭제</button>
+								</td>
+							</tr>
+						</c:when>
+						<c:otherwise>
+							<tr><td colspan="5">작성한 리뷰가 없습니다</td></tr>
+						</c:otherwise>
+					</c:choose>
+				</table>
+			</div>
+>>>>>>> kim:FinalWorkspace/.metadata/.plugins/org.eclipse.core.resources/.history/84/10802112a0d1001b1c84aaf421a81912
+=======
+>>>>>>> kim
 		</div>
 	</section>
 	<c:import url="../footer.jsp"/>

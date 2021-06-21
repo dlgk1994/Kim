@@ -28,5 +28,9 @@
 	<!-- 마이바티스 xml파일과 dao빈 연결  -->
 	<!-- 연동할 파일에 대한 경로 -->
 	<mybatis-spring:scan base-package="com.care.root.mypage.mybatis"/>
+<<<<<<< HEAD
+=======
+	<mybatis-spring:scan base-package="com.care.root.adminProduct.mtbatis"/>
+>>>>>>> kim
 	<mybatis-spring:scan base-package="com.care.root.board.mybatis"/>
 </beans>
